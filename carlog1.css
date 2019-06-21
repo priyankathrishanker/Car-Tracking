@@ -1,0 +1,88 @@
+body{
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-size:cover;
+	margin:0;
+	padding:0;
+}
+h1{
+	color:white;
+	font-family:monotype corsive;
+	font-size:50px;
+}
+.login{
+	margin:0 auto;
+	padding:0 auto;
+	width:320px;
+	height:400px;
+	top:25%;
+	left:35%;
+	position:absolute;
+	background-color:black;
+	opacity:0.8;
+	border:1px solid white;
+	color:white;
+	box-sizing:border-box;
+}
+.signup{
+	margin:0 auto;
+	padding:0 auto;
+	width:350px;
+	height:450px;
+	top:25%;
+	left:35%;
+	position:absolute;
+	background-color:white;
+	opacity:0.8;
+	border:1px solid white;
+	color:black;
+	box-sizing:border-box;
+	
+}
+.form-control{
+	width:300px;
+	height:30px;
+	position:absolute;
+	border:none;
+	border-bottom:1px solid black;
+	outline:none;
+	background:transparent;
+	color:black;
+	font-size:20px;
+	
+	
+}
+input{
+	color:black;
+}
+.login p{
+	font-size:25px;
+	font-weight:bold;
+	color:white;
+}
+.signup p{
+	font-size:20px;
+	font-weight:bold;
+	color:black;
+}
+.form-con{
+	margin:0 auto;
+	position:absolute;
+	width:300px;
+	height:50px;
+	background-color:white;
+	color:black;
+	font-size:15px;
+	font-weight:bold;
+}
+form .form-con:hover{
+	cursor:pointer;
+	background-color:orange;
+}
+	
+h2{
+	color:black;
+	font-family:monotype corsive;
+	font-size:50px;
+}
+	

@@ -1,0 +1,47 @@
+body{
+	background-size : cover;
+	background-repeat : no-repeat;
+	background-attachment : fixed;
+}
+#top{
+	font-family:monotype corsiva;
+	font-size:100px;
+    color:black;
+	text-transform:cursive;
+	text-transform :bold;
+}
+ul{
+	list-style : none;
+	margin : 0px;
+	padding : 0px;
+}
+ul li{
+	float : left;
+	text-align : center;
+	background-color : black;
+	width : 325px;
+	height : 50px;
+	opacity : 0.8;
+	line-height : 50px;
+	font-size: 20px;
+	margin-right : 8px;
+	
+}
+ul li a{
+	display: block;
+	text-decoration: none;
+	color: white;
+}
+ul li a:hover
+{
+	background-color: grey;
+}
+h1{
+	
+	font-family:monotype corsiva;
+	font-size:100px;
+    color:black;
+	text-transform:cursive;
+	text-align:center;
+
+}

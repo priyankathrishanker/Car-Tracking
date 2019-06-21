@@ -1,0 +1,122 @@
+
+<html>
+<head>
+<link href="page2.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&effect=brick-sign">
+<style>
+.w3-lobster {
+  font-family: "Lobster", Sans-serif;
+  color:black;
+}
+.button {
+  position: relative;
+  background-color: #66CCCC;
+  border: none;
+  font-size: 20px;
+  color: white;
+  padding: 20px;
+  width: 170px;
+  height:80px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button:after {
+  content: "";
+  background: white;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+body {font-family: Arial, Helvetica, sans-serif;
+		background-image: url("cars3.jpg");
+		background-repeat:no-repeat;
+		background-size:cover;
+		background-attachment:fixed;}
+label{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:20px;
+	color:white;
+}
+.ghost-button {
+  display: inline-block;
+  width: 200px;
+  height:65px;
+  padding: 8px;
+  color: #000;
+  border: 2px solid #fff;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  transition: background-color 0.2s ease-out,
+              border-color 0.2s ease-out;
+}
+.ghost-button:hover,
+.ghost-button:active {
+  background-color: #fff; /* fallback */
+  background-color: rgba(255, 255, 255, 0.4);
+  border-color: #fff; /* fallback */
+  border-color: rgba(255, 255, 255, 0.4);
+  transition: background-color 0.3s ease-in,
+              border-color 0.3s ease-in;
+}
+h1{
+color:white;
+}
+
+</style>
+</head>
+<body>
+
+
+
+
+<div class="w3-container w3-lobster font-effect-brick-sign">
+<h1 class="w3-xxxlarge"><center>CURRENT LOCATION</center></h1><br><br><br>
+</div>
+<div class="bt">
+<center><button class="ghost-button" onclick="getLocation()">GET COORDINATES</button><br><br>
+<a href="map svce final.html"><button class="ghost-button">VIEW ON MAP</button></a></center>
+
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "<center><h1 ><b>Latitude:" + position.coords.latitude +"</b></h1>"+ 
+  "<h1><b>Longitude: " + position.coords.longitude+"</b></h1></center>";
+}
+</script>
+	<center><a href="button.html"><button class="ghost-button">BACK</button></a></center>
+	</div>
+
+</body>
+
+</html>

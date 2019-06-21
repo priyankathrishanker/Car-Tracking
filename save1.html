@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="save1.css">
+    <script type="text/javascript" src = "mapping.js"></script>
+  </head>
+  <body>
+    <!--show map-->
+    <div id="map" class="mapoutline" onload="initMap()">
+    	
+    </div>
+    <!--Search form-->
+    <div class="search-store">
+        <h3>RETRIEVE LOCATION</h3>
+        <input type="text" id="inputsearch" placeholder="City,Postcode" value="" onkeypress="pressSearch(event)">
+        <button type="button" id="btnSearch" class="btnStore" onclick="btnSearch()">FIND </button>
+        <p>OR</p>
+        <button type="button" id="btnMylocation" class="btnMylocation" onclick="btnMylocation()">USE MYLOCATION</button>
+    </div>
+    <!--Filter Store-->
+   
+        <!--<button class="btn-direction" id="direction"><a href="" id="link-direction" target="_blank"> Get Direction</a></button>-->
+      
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-cL_SxwzrA11R1h7GQxNH_QkTSRJ44mU&callback=initMap"></script>
+    <center><a href="button.html"><button class="button">BACK</button></a></center>
+
+  </body>
+</html>

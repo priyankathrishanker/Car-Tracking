@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+body{
+  margin: 0;
+	font-family: 'Raleway-Light';
+}
+.clearfix:after{
+    clear: both;
+    content: ".";
+    display: block;
+    width: 0px;
+    height: 0px;
+}
+/*---------------------------MAP----------------------------*/
+#map{
+	width: 100%;
+	height: 500px;
+	position: relative;
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+ */
+    filter: gray; /* IE6-9 */
+	-webkit-filter: grayscale(90%); /* Chrome 19+ & Safari 6+ */
+	-webkit-backface-visibility: hidden;  /* Fix for transition flickering */
+}
+/*--------------------------SEARCH STORE---------------------*/
+.search-store{
+    background: #000000;
+    left: 34px;
+    margin: 0;
+    padding: 20px;
+    position: absolute;
+    top: 50px;
+    opacity: 0.9;
+	color: #ffffff;
+}
+.search-store p{
+	padding: 15px 0 0 45%;
+	margin: 0;
+}
+#inputsearch{
+	width: 100%;
+	background: transparent;
+	margin: auto;
+	height: 30px;
+	text-align: center;
+	color: #ffffff;
+	font-size: 13px;
+	font-family: "WorkSans-Regular";
+}
+
+.btnStore{
+	width: 100%;
+	margin: auto;
+	border:none;
+	height: 30px;
+	margin-top: 25px;
+	cursor: pointer;
+	font-size: 15px;
+	font-family: "WorkSans-Regular";
+}
+.btnMylocation{
+	width: 100%;
+	margin: auto;
+	border:none;
+	height: 30px;
+	margin-top: 25px;
+	cursor: pointer;
+	font-size: 15px;
+	font-family: "WorkSans-Regular";
+}
+/*-------------------------------FILTER STORE---------------------------*/
+.filter-store li{
+	list-style-type: none;
+	display: inline-block;
+	font-family: "WorkSans-Bold";
+	font-size: 15px;
+}
+.filter-store p{
+	font-size: 18px;
+	margin-left: 45px;
+}
+/*------------------------------STORE INFO------------------------------*/
+.Markercontent{
+	color: #333;
+	font-family: 'WorkSans-Regular';
+    padding: 10px 8px;
+    text-align: left;
+    width: 225px;
+}
+.Markercontent button{
+	background: transparent;
+	border: 1px solid black;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	height: 30px;
+	cursor: pointer;
+	letter-spacing: 2px;
+	font-size: .6875rem;
+}
+.Markercontent button:hover{
+	background: #000000;
+	color: #ffffff;
+}
+.Markercontent p{
+	margin: 0;
+	padding: 0;
+}
+/*------------------------------------------STORE DETAIL-------------------------*/
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    border: 1px solid #888;
+    width: 62%;
+    height: 440px;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 25px;
+    font-weight: bold;
+    padding-right: 10px;
+    font-family: 'WorkSans-Regular';
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.storedetail{
+	float: left;
+	margin-top: 50px;
+	margin-left: 100px;
+	height: 380px;
+}
+.storedetail hr {
+	width: 300px;
+}
+#storemap{
+	margin-top: 50px;
+	margin-right: 25px;
+	width: 280px;
+	height: 280px;
+	float: right;
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+ */
+    filter: gray; /* IE6-9 */
+	-webkit-filter: grayscale(90%); /* Chrome 19+ & Safari 6+ */
+	-webkit-backface-visibility: hidden;  /* Fix for transition flickering */
+}
+.btn-direction{
+	float: right;
+    margin-top: 30px;
+    margin-right: 190px;
+    background: transparent;;
+    border: 1px solid black;
+    font-family: "WorkSans-Regular";
+    letter-spacing: 2px;
+    color: #000000;
+}
+#link-direction{
+	line-height: 30px;
+	color: #000000;
+	padding: 0 30px 0 30px;
+	text-decoration: none;
+}
+#link-direction:hover{
+	color: #ffffff;
+}
+.btn-direction:hover{
+	background: #000000;
+}
+/*--------------------------------------NEAR STORE-------------------------------*/
+.near-store{
+	display: none;
+	border-top: 1px solid #e0e0e0;
+    margin: 30px 0 45px 45px;
+    padding: 30px 0 45px 45px;
+}
+.near-store h3{
+	font-size: 2rem;
+}
+ul.list-near-store{
+	list-style-type: none;
+}
+.li-near-store li{
+	display: inline-block;
+}
+.NearStore button{
+	background: transparent;
+	border: 1px solid black;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	height: 30px;
+	cursor: pointer;
+	letter-spacing: 2px;
+	font-size: .6875rem;
+}
+.NearStore button:hover{
+	background: #000000;
+	color: #ffffff;
+}
+/*--------------------------------------FIND STORE-------------------------------*/
+.find-store{
+	border-top: 1px solid #e0e0e0;
+    margin: 30px 0 45px 45px;
+    padding: 30px 0 45px 45px;
+    display: none;
+}
+.find-store h1{
+	font-size: 2rem;
+	font-family: "Raleway-Light";
+}
+.find-store button{
+	height: 30px;
+	background: transparent;
+	width: 180px;
+	border: 1px solid black;
+	font-size: 13px;
+	font-family: "WorkSans-Regular";
+	letter-spacing: 2px;
+	cursor: pointer;
+}
+.find-store a {
+	text-decoration: none;
+}
+.find-store button:hover{
+	background: #000000;
+	color: #ffffff;
+}
+.find-store{
+	color: #000000;
+	font-size: 13px;
+}
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0} 
+    to {top: 0; opacity: 1}
+}
+@media all and (max-width: 1279px){
+	.modal-content {
+	    width: 80%;
+	}
+}
+@media all and (max-width: 1024px){
+	.modal-content {
+	    width: 90%;
+	}
+	.storedetail{
+		margin-top: 50px;
+		margin-left: 50px;
+		height: 300px;
+	}
+	.storedetail hr {
+		width: 200px;
+	}
+}
+@media all and (max-width: 768px){
+	.search-store{
+		margin-top: -50px;
+		width: ;
+		left:30%;
+		background: #ffffff;
+		color: #000000;
+	}
+	#map{
+		margin-top: 220px;
+		height: 320px;
+	}
+	#inputsearch{
+		width: 45%;
+		color: #000000;
+		font-size: 11px;	
+		border: 1px solid #ccc;	
+	}
+	.btnStore{
+		width: 45%;
+		border:1px solid black;
+		font-size: 13px;
+		background: transparent;
+		margin-top: 0px;
+		margin-left: 20px;
+	}
+	.btnMylocation{
+		background: transparent;
+		margin-top: 15px;
+		border: 1px solid black;
+	}
+	.modal-content {
+	    width: 96%;
+	    height: 600px;
+	}
+	#storemap{
+		width: 95%;
+		margin-top: -670px;
+		float: none;
+		margin-left: 15px;
+	}
+	.storedetail{
+		margin-top: 400px;
+		float: none;
+	}
+	.storedetail hr {
+		width: 90%;
+	}
+	.btn-direction{
+		float: none;
+		margin-left: 10px;
+	}
+	#link-direction{
+		padding: 0 15px 0 15px;
+	}
+	.filter-store li{
+		display: block;
+	}
+}
+@media all and (max-width: 720px){
+	.btn-direction{
+		float: none;
+		margin-left: 10px;
+		letter-spacing: 0px;
+		width: 150px;
+	}
+	#link-direction{
+		padding: 0 5px 0 5px;
+	}
+	.find-store{
+	    margin: 30px 0 45px 25px;
+	    padding: 30px 0 45px 25px;
+	}
+	.near-store{
+	    margin: 30px 0 45px 25px;
+	    padding: 30px 0 45px 25px;
+	}
+}
+@media all and (max-width: 600px){
+	.search-store{
+		left: 20%;
+	}
+}
+@media all and (max-width: 440px){
+	.search-store{
+		left: 10%;
+	}
+}
